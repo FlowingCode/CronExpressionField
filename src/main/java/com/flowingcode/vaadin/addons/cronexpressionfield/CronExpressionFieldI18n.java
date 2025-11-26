@@ -32,7 +32,6 @@ import java.util.Map;
  */
 public class CronExpressionFieldI18n implements Serializable {
   private Map<LayoutOptions, String> layoutOptions;
-  private String cronExpressionLabel;
   private String clearBtn;
   private String startsAtLabel;
   private Map<CronExpressionField.Units, String> units;
@@ -56,7 +55,6 @@ public class CronExpressionFieldI18n implements Serializable {
   private CronExpressionFieldI18n() {
     this.layoutOptions =
         Map.of(LayoutOptions.DAILY, "Daily", LayoutOptions.MONTHLY, "Monthly", LayoutOptions.ADVANCED, "Advanced");
-    this.cronExpressionLabel = "Cron expression";
     this.clearBtn = "Clear";
     this.startsAtLabel = "Starts at";
     this.units = Map.of(CronExpressionField.Units.SECONDS, "Seconds", CronExpressionField.Units.MINUTES, "Minutes",
@@ -84,26 +82,6 @@ public class CronExpressionFieldI18n implements Serializable {
    */
   public static CronExpressionFieldI18n createDefault() {
     return new CronExpressionFieldI18n();
-  }
-
-  /**
-   * Gets the label for the cron expression input.
-   *
-   * @return the cron expression label
-   */
-  public String getCronExpressionLabel() {
-    return cronExpressionLabel;
-  }
-
-  /**
-   * Sets the label for the cron expression input.
-   *
-   * @param cronExpressionLabel the label to set
-   * @return this instance for method chaining
-   */
-  public CronExpressionFieldI18n setCronExpressionLabel(String cronExpressionLabel) {
-    this.cronExpressionLabel = cronExpressionLabel;
-    return this;
   }
 
   /**
