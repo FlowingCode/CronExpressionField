@@ -156,7 +156,6 @@ public class CronExpressionField extends CustomField<String> {
   }
 
   private void configureLayout() {
-    inputExpressionTf.setLabel(i18n.getCronExpressionLabel());
     inputExpressionTf.setValue(defaultExpression == null ? "" : defaultExpression);
     Button clearInputBtn = new Button(i18n.getClearBtn(), e -> {
       inputExpressionTf.setValue(defaultExpression == null ? "" : defaultExpression);
